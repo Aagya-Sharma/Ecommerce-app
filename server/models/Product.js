@@ -35,6 +35,10 @@ const productSchema = new mongoose.Schema({
   rating: {
     type: Number,
   },
+  isFeatured: {
+    type: Boolean,
+  },
 });
 
-exports.Product = mongoose.model("Product", productSchema);
+const Product = mongoose.model("Product", productSchema);
+module.exports = Product;
